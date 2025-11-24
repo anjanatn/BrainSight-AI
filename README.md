@@ -5,8 +5,6 @@
 
 BrainSight AI is an interactive Flask-based medical imaging demo that transforms any brain CT/MRI slice into **six clinically-inspired heatmaps** and provides heuristic **abnormality probability scores**.
 
-Designed as a **recruiter-friendly portfolio project**, it highlights full-stack AI development, computer vision reasoning, and medical imaging visualization.
-
 ---
 
 ## Features
