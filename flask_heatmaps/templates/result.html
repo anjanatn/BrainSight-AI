@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Prediction Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Prediction Result</h1>
+
+    <h3>Probabilities (heuristic)</h3>
+    <ul>
+      <li>Tumor: {{ probs['Tumor'] }}%</li>
+      <li>Lesion: {{ probs['Lesion'] }}%</li>
+      <li>Atrophy: {{ probs['Atrophy'] }}%</li>
+      <li>Hemorrhage: {{ probs['Hemorrhage'] }}%</li>
+      <li>Volume proxy: {{ probs['VolumeProxy'] }}%</li>
+    </ul>
+
+    <h3>6-panel composite</h3>
+    <img src="{{ maps['composite'] }}" alt="6-panel composite" style="max-width:100%;border:1px solid #ccc">
+
+    <h3>Individual maps</h3>
+    <div class="grid">
+      <div class="card"><h4>Input (placeholder)</h4><img src="{{ maps['base'] }}" alt="base" style="max-width:100%"></div>
+      <div class="card"><h4>Tumor</h4><img src="{{ maps['tumor'] }}" alt="tumor" style="max-width:100%"></div>
+      <div class="card"><h4>Lesion</h4><img src="{{ maps['lesion'] }}" alt="lesion" style="max-width:100%"></div>
+      <div class="card"><h4>Atrophy</h4><img src="{{ maps['atrophy'] }}" alt="atrophy" style="max-width:100%"></div>
+      <div class="card"><h4>Hemorrhage</h4><img src="{{ maps['hemorrhage'] }}" alt="hem" style="max-width:100%"></div>
+      <div class="card"><h4>Volume proxy</h4><img src="{{ maps['vol'] }}" alt="vol" style="max-width:100%"></div>
+    </div>
+
+    <p>Local demo file used (raw path): <code>{{ maps['demo_local_path'] }}</code></p>
+
+    <p><a href="{{ url_for('upload') }}">Run another</a></p>
+  </div>
+</body>
+</html>

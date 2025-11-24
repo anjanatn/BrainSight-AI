@@ -1,0 +1,5 @@
+Flask>=2.0
+Pillow
+numpy
+matplotlib
+scipy   # optional but recommended; script falls back if not installed

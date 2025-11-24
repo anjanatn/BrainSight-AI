@@ -1,0 +1,6 @@
+body { font-family: Arial, sans-serif; background:#f2f4f7; margin:0; padding:20px; }
+.container { max-width:1000px; margin:auto; background:white; padding:20px; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.08); }
+.grid { display:flex; flex-wrap:wrap; gap:10px; }
+.card { flex: 1 1 30%; background:#fafafa; padding:8px; border-radius:6px; text-align:center; }
+button { background:#3066be; color:white; padding:8px 12px; border:none; border-radius:6px; cursor:pointer; }
+button:hover { opacity:0.95; }
